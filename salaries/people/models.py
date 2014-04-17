@@ -7,7 +7,7 @@ class Person(models.Model):
     positionNumber = models.CharField(max_length=255)
     jobClassNumber = models.CharField(max_length=255)
     term = models.IntegerField()
-    fteStatus = models.FloatField()            
+    fteStatus = models.FloatField()
     salary = models.IntegerField()
     def get_absolute_url(self):
         return "/person/%s/" % self.name_slug
