@@ -1,3 +1,13 @@
-<h1>Name & Salary</h1>
+{% load humanize %} {# lets us add a comma to the salary #}
 
-<p>{{ name }} ${{ salary }}</p>
+
+<h2>Name and Salary:</h2>
+{% with item=name|first %}
+<p>{{ item.first_name }} {{ item.last_name }} makes ${{ item.salary|intcomma }}</p>
+
+{# used another loop incase of multiple titles, there's probably a better way  #}
+<h2>Title(s)</h2>
+{% for item in name %}
+<p>{{ item.title }}</p>
+{% endfor %}
+{% endwith %}

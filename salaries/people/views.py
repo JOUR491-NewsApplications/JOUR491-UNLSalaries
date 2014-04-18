@@ -8,6 +8,6 @@ def home(request):
     return render(request, 'index.html', {'names': names})
     
 def personDetail(request, slug):
-    name = Person.objects.get(name_slug=slug)
-    salary = Person.objects.get(name_slug=slug).salary 
-    return render(request, 'persondetail.html', {'name': name, 'salary': salary})    
+    name = Person.objects.filter(name_slug=slug)
+    return render(request, 'persondetail.html', {'name': name })
+      
