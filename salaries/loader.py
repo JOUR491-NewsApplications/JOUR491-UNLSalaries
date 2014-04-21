@@ -16,7 +16,7 @@ for row in reader:
         nom_slug = slugify(nom)
         ttl = row[4]
         fname = row[3]
-        lname = row[4]
+        lname = row[2]
         pnum = row[6]
         jclass = row[7]
         trm = row[8]
