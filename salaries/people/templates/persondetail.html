@@ -13,7 +13,8 @@
 {% with item=name|first %}
 <p>{{ item.first_name }} {{ item.last_name }} makes ${{ item.salary|intcomma }}</p>
 
-{# used another loop incase of multiple titles, there's probably a better way  #}
+
+{# used another loop for multiple titles, there's probably a better way  #}
 <h2>Title(s)</h2>
 {% for item in name %}
 <p>{{ item.title }}</p>
