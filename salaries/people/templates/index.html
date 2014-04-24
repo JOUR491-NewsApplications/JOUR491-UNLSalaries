@@ -1,0 +1,14 @@
+{% extends "base.html"%}
+
+{% block title %}UNL Faculty Salaries{% endblock %}
+
+
+{% block header %}<h1> Names:</h1>{% endblock %}
+
+{% block content %}
+
+{% for n in names %}
+<p><a href="{{n.get_absolute_url}}">{{n.name}}</a></p>
+{% endfor %}
+
+{% endblock %}
