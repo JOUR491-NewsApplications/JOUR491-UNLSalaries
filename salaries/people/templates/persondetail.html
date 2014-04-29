@@ -21,7 +21,8 @@ Lincoln, Nebraska 68583</em></p>
 <p class="cdate">April 29, 2014</p>
 </div>
 
-<div class="checkpay"> {% with item=name|first %}
+{% with item=name|first %}
+<div class="checkpay"> 
 <p class="payee">{{ item.first_name }} {{ item.last_name }}</p>
 </div>
 
@@ -32,9 +33,9 @@ Lincoln, Nebraska 68583</em></p>
 <br/>
 <br/>
 
-<div class="checkmemo"><p class="memo">Position</p>
 {% for item in name %}
-<p class="memo">{{ item.title }}</p>-->
+<div class="checkmemo">
+<p class="memo">{{ item.title }} {% endfor %}</p>
 </div>
 
 <div class="checksign">
@@ -44,17 +45,6 @@ Lincoln, Nebraska 68583</em></p>
 </div>
 
 
-<!-- <h2>Name and Salary:</h2>
-{% with item=name|first %}
-<p>{{ item.first_name }} {{ item.last_name }} makes ${{ item.salary|intcomma }}</p>
 
-
-{# used another loop for multiple titles, there's probably a better way  #}
-<h2>Title(s)</h2>
-{% for item in name %}
-<p>{{ item.title }}</p>-->
-
-{% endfor %}
 {% endwith %}
-
 {% endblock %}
