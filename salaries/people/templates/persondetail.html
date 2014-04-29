@@ -9,14 +9,51 @@
 
 {% block content %}
 
-<h2>Name and Salary:</h2>
+<div class="check">
+<div class="checkhead">
+<p class="headtext"><strong>NU Board of Regents</strong><br/>
+<strong>C/O</strong> Your Tax Dollars<br/>
+<em>3835 Holdrege Street<br/>
+Lincoln, Nebraska 68583</em></p>
+</div>
+
+<div class="checkdate">
+<p class="cdate">April 29, 2014</p>
+</div>
+
+<div class="checkpay"><p class="payee">Payee Name</p>
+<!-- {% with item=name|first %}
+<p>{{ item.first_name }} {{ item.last_name }}</p>-->
+</div>
+
+<div class="checkamount"><p class="amount">$$$$</p>
+<!--<p class="amount">${{ item.salary|intcomma }}</p>-->
+</div>
+
+<br/>
+<br/>
+
+<div class="checkmemo"><p class="memo">Position</p>
+<!--{% for item in name %}
+<p class="memo">{{ item.title }}</p>-->
+</div>
+
+<div class="checksign">
+<p class="signature">Harvey Perlman</p>
+</div>
+
+</div>
+
+
+<!-- <h2>Name and Salary:</h2>
 {% with item=name|first %}
 <p>{{ item.first_name }} {{ item.last_name }} makes ${{ item.salary|intcomma }}</p>
 
 {# used another loop incase of multiple titles, there's probably a better way  #}
 <h2>Title(s)</h2>
 {% for item in name %}
-<p>{{ item.title }}</p>
+<p>{{ item.title }}</p>-->
+
 {% endfor %}
 {% endwith %}
 
