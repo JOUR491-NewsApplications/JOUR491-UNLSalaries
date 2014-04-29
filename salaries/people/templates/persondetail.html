@@ -21,20 +21,19 @@ Lincoln, Nebraska 68583</em></p>
 <p class="cdate">April 29, 2014</p>
 </div>
 
-<div class="checkpay"><p class="payee">Payee Name</p>
-<!-- {% with item=name|first %}
-<p>{{ item.first_name }} {{ item.last_name }}</p>-->
+<div class="checkpay"> {% with item=name|first %}
+<p class="payee">{{ item.first_name }} {{ item.last_name }}</p>
 </div>
 
-<div class="checkamount"><p class="amount">$$$$</p>
-<!--<p class="amount">${{ item.salary|intcomma }}</p>-->
+<div class="checkamount">
+<p class="amount">${{ item.salary|intcomma }}</p>
 </div>
 
 <br/>
 <br/>
 
 <div class="checkmemo"><p class="memo">Position</p>
-<!--{% for item in name %}
+{% for item in name %}
 <p class="memo">{{ item.title }}</p>-->
 </div>
 
