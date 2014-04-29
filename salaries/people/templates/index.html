@@ -2,10 +2,15 @@
 
 {% block title %}UNL Faculty Salaries{% endblock %}
 
-
 {% block header %}<h1> Names:</h1>{% endblock %}
 
 {% block content %}
+
+{# search form does nothing #}
+<form method="get" action="">
+    <input type="text"   name="q" size="31" maxlength="255" value="" />
+    <input type="submit" value="Search" />
+</form>
 
 {% for n in names %}
 <p><a href="{{n.get_absolute_url}}">{{n.name}}</a></p>

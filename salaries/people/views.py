@@ -11,3 +11,4 @@ def personDetail(request, slug):
     name = Person.objects.filter(name_slug=slug)
     return render(request, 'persondetail.html', {'name': name })
       
+      
