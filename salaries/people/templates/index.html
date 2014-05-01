@@ -2,9 +2,16 @@
 
 {% block title %}UNL Faculty Salaries{% endblock %}
 
-{% block header %}<h1> Names:</h1>{% endblock %}
+{% block header %}{% endblock %}
 
 {% block content %}
+
+<div class="col-md-11 col-md-offset-1 col-xs-11 col-xs-offset-1"><h3> Welcome to our UNL Salary Finder:</h3></div>
+
+<div class="col-md-9 col-md-offset-2 col-xs-9 col-xs-offset-2 col-sm-9 col-sm-offset-2"><p>Tired of searching through PDFs to access UNL salary records?</p>
+
+<p>So were we! Which is where this UNL Salary Finder came from. So now, instead of pouring over pages of records, just type in the name of who you are looking for and let us do the rest!</p>
+</div>
 
 {# search form does nothing #}
 <form method="get" action="">
@@ -12,8 +19,8 @@
     <input type="submit" value="Search" />
 </form>
 
-{% for n in names %}
+<!-- {% for n in names %}
 <p><a href="{{n.get_absolute_url}}">{{n.name}}</a></p>
-{% endfor %}
+{% endfor %} --> 
 
 {% endblock %}

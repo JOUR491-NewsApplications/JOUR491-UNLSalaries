@@ -5,16 +5,24 @@
 {% block title %}UNL Facuty Salaries{% endblock %}
 
 
-{% block header %}Details{% endblock %}
+{% block header %}<h4>Survey says...</h4>{% endblock %}
 
 {% block content %}
-
+<div class="row">
+<div class="col-md-4 col-md-offset-4 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2 headtab">
+<h5 class="tabhead">Payment Details</h5>
+</div>
+</div>
+<div class="row">
 <div class="check">
-<div class="checkhead">
+<div class="checkhead bigger">
 <p class="headtext"><strong>NU Board of Regents</strong><br/>
 <strong>C/O</strong> Your Tax Dollars<br/>
 <em>3835 Holdrege Street<br/>
 Lincoln, Nebraska 68583</em></p>
+</div>
+
+<div class="checkhead smaller"><p class="headtext"><big><strong>Pay Stub</strong></big></p>
 </div>
 
 <div class="checkdate">
@@ -33,15 +41,26 @@ Lincoln, Nebraska 68583</em></p>
 <br/>
 <br/>
 
-{% for item in name %}
+
 <div class="checkmemo">
-<p class="memo">{{ item.title }} {% endfor %}</p>
+<p class="memotop">For the duties of:</p>
+<p class="memo">{% for item in name %}{{ item.title }}<br/>{% endfor %}</p>
 </div>
 
 <div class="checksign">
+<p class="memotop"><small><em>Signed</em>:</small></p>
 <p class="signature">Harvey Perlman</p>
 </div>
 
+</div>
+</div>
+
+<div class="row">
+<div class="col-md-10 col-md-offset-1">
+<p class="shorts"><strong>Short Story:</strong> {{ item.first_name }} {{ item.last_name }} makes a salary of ${{ item.salary|intcomma }}.
+
+
+</div>
 </div>
 
 
