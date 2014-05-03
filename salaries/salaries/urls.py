@@ -6,6 +6,7 @@ admin.autodiscover()
 urlpatterns = patterns('',
     url(r'^$', 'people.views.home', name='home'),
     url(r'^person/(?P<slug>[-\w]+)/$', 'people.views.personDetail', name='persondetail'),
+    url(r'^search/', include('haystack.urls')),
     
     # url(r'^blog/', include('blog.urls')),
 

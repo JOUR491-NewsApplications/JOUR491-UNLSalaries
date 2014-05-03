@@ -15,5 +15,5 @@ class Person(models.Model):
     def get_absolute_url(self):
         return "http://127.0.0.1:8000/person/%s/" % self.name_slug
     def __unicode__(self):
-        return self.name
+        return "http://127.0.0.1:8000/" % self.name
         
